@@ -6,7 +6,7 @@ st.title("🎬 Movie Recommender")
 movie = st.text_input("Enter movie name")
 
 if st.button("Recommend"):
-    res = requests.get(f"http://127.0.0.1:8000/predict?title={movie}")
+    res = requests.get(f"https://movie-recommender-fcqt.onrender.com/recommend?title={movie}")
     data = res.json()
 
     for m in data["recommendations"]:
